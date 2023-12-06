@@ -3,8 +3,8 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "dev": "rsbuild dev --open",
-    "build": "NODE_ENV=development rsbuild build",
+    "dev": "DEBUG=rsbuild rsbuild dev",
+    "build": "DEBUG=rsbuild rsbuild build",
     "preview": "rsbuild preview"
   },
   "dependencies": {
@@ -13,9 +13,11 @@
   },
   "devDependencies": {
     "@rsbuild/core": "^0.1.6",
+    "@rsbuild/plugin-assets-retry": "^0.1.9",
     "@rsbuild/plugin-react": "^0.1.6",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "babel-plugin-jsx-dom-expressions": "^0.37.9",
     "postcss-px-to-viewport": "^1.1.1",
     "tailwindcss": "^3.3.5",
     "typescript": "^5.3.0"
